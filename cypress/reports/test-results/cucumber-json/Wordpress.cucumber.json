@@ -1,0 +1,152 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Validate the My Profile page in Wordpress site",
+    "line": 1,
+    "id": "validate-the-my-profile-page-in-wordpress-site",
+    "tags": [],
+    "uri": "Wordpress.feature",
+    "elements": [
+      {
+        "id": "validate-the-my-profile-page-in-wordpress-site;validate-the-first-name-and-last-name-update",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Validate the First name and Last name update",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Login with Wordpress App \"harigowtham30\" and \"GISadmin$5\"",
+            "result": {
+              "status": "passed",
+              "duration": 21451000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "Navigate to My profile page",
+            "result": {
+              "status": "passed",
+              "duration": 57688000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Enter the \"Hari\" and \"Ramanujam\" \"hari_Test\" \"Automation Developer\"",
+            "result": {
+              "status": "passed",
+              "duration": 5845000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "Save and validate the data which we entered \"hari_Test\"",
+            "result": {
+              "status": "passed",
+              "duration": 78000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "validate-the-my-profile-page-in-wordpress-site;validate-the-add-profile-link-by-wordpress-site",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Validate the Add Profile Link by WordPress site",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "Login with Wordpress App \"harigowtham30\" and \"GISadmin$5\"",
+            "result": {
+              "status": "passed",
+              "duration": 13186000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "Navigate to My profile page",
+            "result": {
+              "status": "passed",
+              "duration": 19696000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "Add wordpress Link to profile link part \"harigowtham91\"",
+            "result": {
+              "status": "failed",
+              "error_message": "AssertionError: Timed out retrying after 4000ms: expected '[ <span.profile-link__title>, 1 more... ]' to have text 'harigowtham91', but the text was 'harigowtham91google site test'\n    + expected - actual\n\n    -'harigowtham91google site test'\n    +'harigowtham91'\n\n    at MyProfile.verifyAddedsite (https://wordpress.com/__cypress/tests?p=cypress\\integration\\BDD\\Wordpress.feature:253:30)\n    at Context.eval (https://wordpress.com/__cypress/tests?p=cypress\\integration\\BDD\\Wordpress.feature:66:13)\n    at Context.resolveAndRunStepDefinition (https://wordpress.com/__cypress/tests?p=cypress\\integration\\BDD\\Wordpress.feature:10776:29)\n    at Context.eval (https://wordpress.com/__cypress/tests?p=cypress\\integration\\BDD\\Wordpress.feature:10097:35)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "validate-the-my-profile-page-in-wordpress-site;validate-the-add-profile-link-by-url-site",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "Validate the Add Profile Link by Url site",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "Login with Wordpress App \"harigowtham30\" and \"GISadmin$5\"",
+            "result": {
+              "status": "passed",
+              "duration": 10798000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "Navigate to My profile page",
+            "result": {
+              "status": "passed",
+              "duration": 11713000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "Add URL Link to profile link part \"harigowtham91\" \"www.google.com\" \"google site test\"",
+            "result": {
+              "status": "passed",
+              "duration": 4301000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "Logout the sytem",
+            "result": {
+              "status": "passed",
+              "duration": 2602000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

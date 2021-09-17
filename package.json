@@ -1,0 +1,33 @@
+{
+  "name": "WordPress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean":"npx rimraf ./cypress/reports/test-results && npx rimraf ./cypress/videos/BDD && npx rimraf ./cypress/screenshots/",
+    "report": "node report.js",
+    "all": "npx cypress run --browser chrome --headed --spec cypress/integration/**/* && npm run report",
+    "word": "npm run clean && npx cypress run --browser chrome --headed --spec cypress/integration/BDD/Wordpress.feature && npm run report",
+    "test": "npm run word"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cucumber-html-reporter": "^5.5.0",
+    "cypress": "^7.7.0",
+    "cypress-cucumber-preprocessor": "^4.2.0",
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "rimraf": "^3.0.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/integration/step_definitions/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "../WordPress/cypress/reports/test-results/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
