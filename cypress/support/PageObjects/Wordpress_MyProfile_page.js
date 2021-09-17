@@ -20,7 +20,9 @@ export default class MyProfile {
         this.AddURLSitebutton = '.profile-links-add-other__add'
         this.profileLink = '.profile-link'
         this.SiteTitle = '.profile-link__title'
-        this.SiteRemoveIcon = '.profile-links__list > :nth-child(1) > .button'
+        // this.SiteRemoveIcon = '.profile-links__list > :nth-child(1) > .button'
+        this.SiteRemoveIcon = '#primary > main > div:nth-child(5) > div > ul > li'
+        this.SiteRemoveIconClick = '.profile-links__list > :nth-child(1) > .button > .gridicon'
         this.EnterURlTextBox = '.profile-links-add-other__value'
         this.EterDiscriptionTextBox = '.profile-links-add-other__title'
     }
@@ -28,7 +30,6 @@ export default class MyProfile {
     MyProfileIconClikc() {
         cy.wait(2000);
         cy.get(this.myProfileIcon).click();
-        cy.wait(3000);
     }
 
     fillFirstName(Fname) {
@@ -95,17 +96,20 @@ export default class MyProfile {
     }
 
     removeAllURL() {
-       return cy.get('body').then($body => {
-           cy.log($body.find(this.SiteRemoveIcon).length);
-           debugger;
-            for(var i = 0;$body.find(this.SiteRemoveIcon).length != 0;i++) {
-                cy.get(this.SiteRemoveIcon).click()
+        return cy.get('body').then($body => {
+            console.log($body.find(this.SiteRemoveIcon).length);
+            var len = $body.find(this.SiteRemoveIcon).length;
+            return len
+        }).then((len) => {
+            for (var i = 0; len != 0; i++) {
+                cy.get(this.SiteRemoveIconClick).click()
                 cy.wait(2000)
+                len--;
             }
-        });
+        })
     }
 
-    setUrlVal(url,urlNote){
+    setUrlVal(url, urlNote) {
         cy.get(this.EnterURlTextBox).clear()
         cy.get(this.EnterURlTextBox).type(url)
         cy.get(this.EterDiscriptionTextBox).clear()
@@ -114,7 +118,7 @@ export default class MyProfile {
     }
 
     AddwordPressSite() {
-        // this.removeAllURL();
+        this.removeAllURL();
         cy.get("body").then($body => {
             if ($body.find(".profile-link").length <= 0) {
                 this.clikcAdd().then(() => {
@@ -129,14 +133,14 @@ export default class MyProfile {
 
     }
 
-    AddURLSite(url,urlNote) {
-        // this.removeAllURL();
+    AddURLSite(url, urlNote) {
+        this.removeAllURL();
         this.clikcAdd().then(() => {
             this.clickURLSiteLink().then(() => {
-                    this.setUrlVal(url,urlNote)
-                    cy.get(this.AddURLSitebutton).click()
-                })
+                this.setUrlVal(url, urlNote)
+                cy.get(this.AddURLSitebutton).click()
             })
+        })
     }
 
     verifyAddedsite(val) {
