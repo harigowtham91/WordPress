@@ -40,7 +40,7 @@ Feature: Validate the My Profile page in Wordpress site
             | Gowtham   | Ram      | harigowtham30 | GISadmin$5 | hari_Test   | Automation Developer Edited |
 
 
-    Scenario Outline: Validate the hide Avathar
+    Scenario Outline: Validate the hide Gravatar
         Given Login with Wordpress App "<username>" and "<password>"
         And Navigate to My profile page
         Then Hide my Gravatar profile
@@ -49,7 +49,7 @@ Feature: Validate the My Profile page in Wordpress site
             | username      | password   | SiteName      |
             | harigowtham30 | GISadmin$5 | harigowtham91 |
 
-    Scenario Outline: Validate the Un hide Avathar
+    Scenario Outline: Validate the Un hide Gravatar
         Given Login with Wordpress App "<username>" and "<password>"
         And Navigate to My profile page
         Then Un-Hide my Gravatar profile
