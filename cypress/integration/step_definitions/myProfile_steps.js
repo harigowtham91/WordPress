@@ -41,6 +41,14 @@ When(/^Add URL Link to profile link part "([^"]*)" "([^"]*)" "([^"]*)"$/, (SiteN
 });
 
 
+Then(/^Hide my Gravatar profile$/, () => {
+	myprofile.hideMyGravatar();
+});
+
+Then(/^Un-Hide my Gravatar profile$/, () => {
+	myprofile.unHideMyGravatar();
+});
+
 
 Then(/^Logout the sytem$/, () => {
     login.logout();
