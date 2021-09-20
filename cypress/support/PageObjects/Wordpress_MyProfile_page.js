@@ -10,6 +10,7 @@ export default class MyProfile {
         this.hideMyProfile = '#inspector-toggle-control-0';
         this.saveProfileDetails = '.profile__submit-button-wrapper > .button'
         this.leftSide = '.profile-gravatar__user-display-name'
+        this.hideToggle = '#primary > main > div.card.profile__settings > form > fieldset:nth-child(5) > div > div > span'
 
         // Profile Links Part
         this.addButton = '.button > span'
@@ -140,6 +141,32 @@ export default class MyProfile {
                 this.setUrlVal(url, urlNote)
                 cy.get(this.AddURLSitebutton).click()
             })
+        })
+    }
+
+    hideMyGravatar() {
+        cy.get("body").then($body => {
+            if ($body.find("is-checked").length > 0) {   
+                cy.log('selected already');
+            } else {
+                cy.get(this.hideToggle).click();
+            }
+        }).then(()=>{
+            this.Save();
+        })
+    }
+
+    unHideMyGravatar() {
+        cy.get("body").then($body => {
+            cy.log($body.find("is-checked").length)
+            debugger
+            if ($body.find("is-checked").length > 0) {   
+                cy.get(this.hideToggle).click();
+            } else {
+                cy.log('Un selected already');
+            }
+        }).then(()=>{
+            this.Save();
         })
     }
 
