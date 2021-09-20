@@ -3,8 +3,8 @@ Feature: Validate the My Profile page in Wordpress site
     Scenario Outline: Validate the First name and Last name update
         Given Login with Wordpress App "<username>" and "<password>"
         And Navigate to My profile page
-        Then Enter the "<FirstName>" and "<LastName>" "<DisplayName>" "<AboutMe>"
-        And Save and validate the data which we entered "<DisplayName>"
+        When Enter the "<FirstName>" and "<LastName>" "<DisplayName>" "<AboutMe>"
+        Then Save and validate the data which we entered "<DisplayName>"
 
         Examples:
             | FirstName | LastName  | username      | password   | DisplayName | AboutMe              |
@@ -12,8 +12,8 @@ Feature: Validate the My Profile page in Wordpress site
 
     Scenario Outline: Validate the Add Profile Link by WordPress site
         Given Login with Wordpress App "<username>" and "<password>"
-        And Navigate to My profile page
-        When Add wordpress Link to profile link part "<SiteName>"
+        When Navigate to My profile page
+        Then Add wordpress Link to profile link part "<SiteName>"
 
         Examples:
             | username      | password   | SiteName      |
@@ -21,19 +21,19 @@ Feature: Validate the My Profile page in Wordpress site
 
     Scenario Outline: Validate the Add Profile Link by Url site
         Given Login with Wordpress App "<username>" and "<password>"
-        And Navigate to My profile page
-        When Add URL Link to profile link part "<SiteName>" "<URL>" "<URLDetails>"
-        And Logout the sytem
+        When Navigate to My profile page
+        Then Add URL Link to profile link part "<SiteName>" "<URL>" "<URLDetails>"
+        Then Logout the system
 
         Examples:
             | username      | password   | SiteName      | URL            | URLDetails       |
             | harigowtham30 | GISadmin$5 | harigowtham91 | www.google.com | google site test |
 
-    Scenario Outline: Edit Excesting data the First name and Last name update and Username
+    Scenario Outline: Edit Excesting data the First name and Last name update and Display Name
         Given Login with Wordpress App "<username>" and "<password>"
-        And Navigate to My profile page
-        Then Enter the "<FirstName>" and "<LastName>" "<DisplayName>" "<AboutMe>"
-        And Save and validate the data which we entered "<DisplayName>"
+        When Navigate to My profile page
+        And Enter the "<FirstName>" and "<LastName>" "<DisplayName>" "<AboutMe>"
+        Then Save and validate the data which we entered "<DisplayName>"
 
         Examples:
             | FirstName | LastName | username      | password   | DisplayName | AboutMe                     |
@@ -42,7 +42,7 @@ Feature: Validate the My Profile page in Wordpress site
 
     Scenario Outline: Validate the hide Gravatar
         Given Login with Wordpress App "<username>" and "<password>"
-        And Navigate to My profile page
+        When Navigate to My profile page
         Then Hide my Gravatar profile
 
         Examples:
@@ -51,7 +51,7 @@ Feature: Validate the My Profile page in Wordpress site
 
     Scenario Outline: Validate the Un hide Gravatar
         Given Login with Wordpress App "<username>" and "<password>"
-        And Navigate to My profile page
+        When Navigate to My profile page
         Then Un-Hide my Gravatar profile
 
         Examples:
