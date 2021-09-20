@@ -50,6 +50,6 @@ Then(/^Un-Hide my Gravatar profile$/, () => {
 });
 
 
-Then(/^Logout the sytem$/, () => {
+Then(/^Logout the system$/, () => {
     login.logout();
 });
