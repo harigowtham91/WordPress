@@ -17,23 +17,23 @@ Then(/^Navigate to My profile page$/, () => {
     myprofile.MyProfileIconClikc();
 });
 
-Then(/^Enter the "([^"]*)" "([^"]*)" "([^"]*)" and "([^"]*)"$/, (Fname, Lname, DispName, AboutMe) => {
+Then(/^Enter the "([^"]*)" "([^"]*)" "([^"]*)" and "([^"]*)" and save$/, (Fname, Lname, DispName, AboutMe) => {
     cy.log(Fname, Lname, DispName, AboutMe);
     myprofile.fillDetails(Fname, Lname, DispName, AboutMe);
 });
 
 
-Then(/^validate the data which we entered "([^"]*)"$/, (Dname) => {
+Then(/^Validate profile saved successfully which entered "([^"]*)" "([^"]*)" "([^"]*)" and "([^"]*)"$/, (Fname, Lname, Dname, AboutMe) => {
     cy.log(Dname);
     myprofile.verifyDispName(Dname);
 });
 
 
-When(/^Add wordpress Link to profile link part "([^"]*)"$/, (SiteName) => {
+When(/^Add wordpress Link to profile link part with "([^"]*)"$/, (SiteName) => {
     myprofile.AddwordPressSite();
 });
 
-Then(/^Validate the added "([^"]*)" Link$/, (SiteName) => {
+Then(/^Validate site added successfully with "([^"]*)"$/, (SiteName) => {
     myprofile.verifyAddedsite(SiteName);
 });
 
@@ -44,9 +44,12 @@ When(/^Add URL Link to profile link part by adding "([^"]*)" "([^"]*)" and "([^"
 });
 
 
-Then(/^Validate the Added Site$/, () => {
-    return true;
+
+Then(/^Validate URL site added successfully with "([^"]*)"$/, (args1) => {
+	console.log(args1);
+	return true;
 });
+
 
 Then(/^Hide my Gravatar profile$/, () => {
     myprofile.hideMyGravatar();

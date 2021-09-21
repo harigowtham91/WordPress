@@ -10,7 +10,7 @@ export default class MyProfile {
         this.hideMyProfile = '#inspector-toggle-control-0';
         this.saveProfileDetails = '.profile__submit-button-wrapper > .button'
         this.leftSide = '.profile-gravatar__user-display-name'
-        this.hideToggle = '#primary > main > div.card.profile__settings > form > fieldset:nth-child(5) > div > div > span'
+        this.hideToggle = '#inspector-toggle-control-0'
 
         // Profile Links Part
         this.addButton = '.button > span'
@@ -21,7 +21,6 @@ export default class MyProfile {
         this.AddURLSitebutton = '.profile-links-add-other__add'
         this.profileLink = '.profile-link'
         this.SiteTitle = '.profile-link__title'
-        // this.SiteRemoveIcon = '.profile-links__list > :nth-child(1) > .button'
         this.SiteRemoveIcon = '#primary > main > div:nth-child(5) > div > ul > li'
         this.SiteRemoveIconClick = '.profile-links__list > :nth-child(1) > .button > .gridicon'
         this.EnterURlTextBox = '.profile-links-add-other__value'
@@ -52,15 +51,6 @@ export default class MyProfile {
         cy.get(this.aboutMe).clear()
         return cy.get(this.aboutMe).type(val);
     }
-
-    // displyNameFromRightMenu() {
-
-    //     // const textVal = cy.get(this.leftSide).should(($div) => {
-    //     //     const text = $div.text()
-    //     //     console.log(text);
-    //     //     return text;
-    //     // })
-    // }
 
     clikcAdd() {
         return cy.get(this.addButton).click();

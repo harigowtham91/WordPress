@@ -8,10 +8,10 @@
     "uri": "Wordpress.feature",
     "elements": [
       {
-        "id": "validate-the-my-profile-page-in-wordpress-site;validate-the-first-name-and-last-name-update",
+        "id": "validate-the-my-profile-page-in-wordpress-site;validate-my-profile-details-saved-successfully",
         "keyword": "Scenario",
         "line": 11,
-        "name": "Validate the First name and Last name update",
+        "name": "Validate My Profile details saved successfully",
         "tags": [],
         "type": "scenario",
         "steps": [
@@ -22,7 +22,7 @@
             "name": "Login to Wordpress App with \"harigowtham30\" and \"GISadmin$5\"",
             "result": {
               "status": "passed",
-              "duration": 25865000000
+              "duration": 25396000000
             }
           },
           {
@@ -32,36 +32,36 @@
             "name": "Navigate to My profile page",
             "result": {
               "status": "passed",
-              "duration": 10167000000
+              "duration": 12835000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 6,
-            "name": "Enter the \"Hari\" \"Ramanujam\" \"hari_Test\" and \"Automation Developer\"",
+            "name": "Enter the \"Hari\" \"Ramanujam\" \"hari_Test\" and \"Automation Developer\" and save",
             "result": {
               "status": "passed",
-              "duration": 3626000000
+              "duration": 3768000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 7,
-            "name": "validate the data which we entered \"hari_Test\"",
+            "name": "Validate profile saved successfully which entered \"Hari\" \"Ramanujam\" \"hari_Test\" and \"Automation Developer\"",
             "result": {
               "status": "passed",
-              "duration": 87000000
+              "duration": 85000000
             }
           }
         ]
       },
       {
-        "id": "validate-the-my-profile-page-in-wordpress-site;validate-the-add-profile-link-by-wordpress-site",
+        "id": "validate-the-my-profile-page-in-wordpress-site;validate-add-profile-link-by-wordpress-site-successfully",
         "keyword": "Scenario",
         "line": 21,
-        "name": "Validate the Add Profile Link by WordPress site",
+        "name": "Validate Add Profile Link by WordPress site successfully",
         "tags": [],
         "type": "scenario",
         "steps": [
@@ -72,7 +72,7 @@
             "name": "Login to Wordpress App with \"harigowtham30\" and \"GISadmin$5\"",
             "result": {
               "status": "passed",
-              "duration": 6199000000
+              "duration": 6988000000
             }
           },
           {
@@ -82,36 +82,36 @@
             "name": "Navigate to My profile page",
             "result": {
               "status": "passed",
-              "duration": 6218000000
+              "duration": 6798000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 16,
-            "name": "Add wordpress Link to profile link part \"harigowtham91\"",
+            "name": "Add wordpress Link to profile link part with \"harigowtham91\"",
             "result": {
               "status": "passed",
-              "duration": 3307000000
+              "duration": 1081000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 17,
-            "name": "Validate the added \"harigowtham91\" Link",
+            "name": "Validate site added successfully with \"harigowtham91\"",
             "result": {
               "status": "passed",
-              "duration": 591000000
+              "duration": 642000000
             }
           }
         ]
       },
       {
-        "id": "validate-the-my-profile-page-in-wordpress-site;validate-the-add-profile-link-by-url-site",
+        "id": "validate-the-my-profile-page-in-wordpress-site;validate-add-profile-link-by-url-site-successfully",
         "keyword": "Scenario",
         "line": 31,
-        "name": "Validate the Add Profile Link by Url site",
+        "name": "Validate Add Profile Link by Url site successfully",
         "tags": [],
         "type": "scenario",
         "steps": [
@@ -122,7 +122,7 @@
             "name": "Login to Wordpress App with \"harigowtham30\" and \"GISadmin$5\"",
             "result": {
               "status": "passed",
-              "duration": 5827000000
+              "duration": 6542000000
             }
           },
           {
@@ -132,7 +132,7 @@
             "name": "Navigate to My profile page",
             "result": {
               "status": "passed",
-              "duration": 6397000000
+              "duration": 7402000000
             }
           },
           {
@@ -142,26 +142,26 @@
             "name": "Add URL Link to profile link part by adding \"harigowtham91\" \"www.google.com\" and \"google site test\"",
             "result": {
               "status": "passed",
-              "duration": 4668000000
+              "duration": 4757000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 27,
-            "name": "Validate the Added Site",
+            "name": "Validate URL site added successfully with \"www.google.com\"",
             "result": {
               "status": "passed",
-              "duration": 14000000
+              "duration": 8000000
             }
           }
         ]
       },
       {
-        "id": "validate-the-my-profile-page-in-wordpress-site;edit-excesting-data-the-first-name-and-last-name-update-and-display-name",
+        "id": "validate-the-my-profile-page-in-wordpress-site;validate-edit-existing-my-profile-data-details-saved-successfully",
         "keyword": "Scenario",
         "line": 41,
-        "name": "Edit Excesting data the First name and Last name update and Display Name",
+        "name": "Validate Edit existing My Profile data details saved successfully",
         "tags": [],
         "type": "scenario",
         "steps": [
@@ -172,7 +172,7 @@
             "name": "Login to Wordpress App with \"harigowtham30\" and \"GISadmin$5\"",
             "result": {
               "status": "passed",
-              "duration": 6413000000
+              "duration": 6171000000
             }
           },
           {
@@ -182,27 +182,27 @@
             "name": "Navigate to My profile page",
             "result": {
               "status": "passed",
-              "duration": 7023000000
+              "duration": 8169000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 36,
-            "name": "Enter the \"Gowtham\" \"Ram\" \"hari_Test\" and \"Automation Developer Edited\"",
+            "name": "Enter the \"Gowtham\" \"Ram\" \"hari_Test\" and \"Automation Developer Edited\" and save",
             "result": {
               "status": "passed",
-              "duration": 3634000000
+              "duration": 3540000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 37,
-            "name": "validate the data which we entered \"hari_Test\"",
+            "name": "Validate profile saved successfully which entered \"Gowtham\" \"Ram\" \"hari_Test\" and \"Automation Developer Edited\"",
             "result": {
               "status": "passed",
-              "duration": 65000000
+              "duration": 66000000
             }
           }
         ]
@@ -222,7 +222,7 @@
             "name": "Login to Wordpress App with \"harigowtham30\" and \"GISadmin$5\"",
             "result": {
               "status": "passed",
-              "duration": 6220000000
+              "duration": 6141000000
             }
           },
           {
@@ -232,7 +232,7 @@
             "name": "Navigate to My profile page",
             "result": {
               "status": "passed",
-              "duration": 6637000000
+              "duration": 9555000000
             }
           },
           {
@@ -242,7 +242,7 @@
             "name": "Hide my Gravatar profile",
             "result": {
               "status": "passed",
-              "duration": 602000000
+              "duration": 662000000
             }
           },
           {
@@ -272,7 +272,7 @@
             "name": "Login to Wordpress App with \"harigowtham30\" and \"GISadmin$5\"",
             "result": {
               "status": "passed",
-              "duration": 6836000000
+              "duration": 8071000000
             }
           },
           {
@@ -282,7 +282,7 @@
             "name": "Navigate to My profile page",
             "result": {
               "status": "passed",
-              "duration": 6540000000
+              "duration": 9569000000
             }
           },
           {
@@ -292,7 +292,7 @@
             "name": "Un-Hide my Gravatar profile",
             "result": {
               "status": "passed",
-              "duration": 44000000
+              "duration": 56000000
             }
           },
           {
@@ -302,7 +302,7 @@
             "name": "Validate the un Hide Gravatar",
             "result": {
               "status": "passed",
-              "duration": 36000000
+              "duration": 39000000
             }
           }
         ]
