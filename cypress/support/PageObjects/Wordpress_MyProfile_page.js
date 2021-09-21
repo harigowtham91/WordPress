@@ -159,7 +159,6 @@ export default class MyProfile {
     unHideMyGravatar() {
         cy.get("body").then($body => {
             cy.log($body.find("is-checked").length)
-            debugger
             if ($body.find("is-checked").length > 0) {   
                 cy.get(this.hideToggle).click();
             } else {
