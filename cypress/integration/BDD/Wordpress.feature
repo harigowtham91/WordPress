@@ -1,39 +1,40 @@
 Feature: Validate the My Profile page in Wordpress site
 
     Scenario Outline: Validate the First name and Last name update
-        Given Login with Wordpress App "<username>" and "<password>"
+        Given Login to Wordpress App with "<username>" and "<password>"
         And Navigate to My profile page
-        When Enter the "<FirstName>" and "<LastName>" "<DisplayName>" "<AboutMe>"
-        Then Save and validate the data which we entered "<DisplayName>"
+        When Enter the "<FirstName>" "<LastName>" "<DisplayName>" and "<AboutMe>"
+        Then validate the data which we entered "<DisplayName>"
 
         Examples:
             | FirstName | LastName  | username      | password   | DisplayName | AboutMe              |
             | Hari      | Ramanujam | harigowtham30 | GISadmin$5 | hari_Test   | Automation Developer |
 
     Scenario Outline: Validate the Add Profile Link by WordPress site
-        Given Login with Wordpress App "<username>" and "<password>"
+        Given Login to Wordpress App with "<username>" and "<password>"
         When Navigate to My profile page
-        Then Add wordpress Link to profile link part "<SiteName>"
+        And Add wordpress Link to profile link part "<SiteName>"
+        Then Validate the added "<SiteName>" Link
 
         Examples:
             | username      | password   | SiteName      |
             | harigowtham30 | GISadmin$5 | harigowtham91 |
 
     Scenario Outline: Validate the Add Profile Link by Url site
-        Given Login with Wordpress App "<username>" and "<password>"
+        Given Login to Wordpress App with "<username>" and "<password>"
         When Navigate to My profile page
-        Then Add URL Link to profile link part "<SiteName>" "<URL>" "<URLDetails>"
-        Then Logout the system
+        And Add URL Link to profile link part by adding "<SiteName>" "<URL>" and "<URLDetails>"
+        Then Validate the Added Site
 
         Examples:
             | username      | password   | SiteName      | URL            | URLDetails       |
             | harigowtham30 | GISadmin$5 | harigowtham91 | www.google.com | google site test |
 
     Scenario Outline: Edit Excesting data the First name and Last name update and Display Name
-        Given Login with Wordpress App "<username>" and "<password>"
+        Given Login to Wordpress App with "<username>" and "<password>"
         When Navigate to My profile page
-        And Enter the "<FirstName>" and "<LastName>" "<DisplayName>" "<AboutMe>"
-        Then Save and validate the data which we entered "<DisplayName>"
+        When Enter the "<FirstName>" "<LastName>" "<DisplayName>" and "<AboutMe>"
+        Then validate the data which we entered "<DisplayName>"
 
         Examples:
             | FirstName | LastName | username      | password   | DisplayName | AboutMe                     |
@@ -41,18 +42,20 @@ Feature: Validate the My Profile page in Wordpress site
 
 
     Scenario Outline: Validate the hide Gravatar
-        Given Login with Wordpress App "<username>" and "<password>"
+        Given Login to Wordpress App with "<username>" and "<password>"
         When Navigate to My profile page
-        Then Hide my Gravatar profile
+        And Hide my Gravatar profile
+        Then Validate the Hide Gravatar
 
         Examples:
             | username      | password   | SiteName      |
             | harigowtham30 | GISadmin$5 | harigowtham91 |
 
     Scenario Outline: Validate the Un hide Gravatar
-        Given Login with Wordpress App "<username>" and "<password>"
+        Given Login to Wordpress App with "<username>" and "<password>"
         When Navigate to My profile page
-        Then Un-Hide my Gravatar profile
+        And Un-Hide my Gravatar profile
+        Then Validate the un Hide Gravatar
 
         Examples:
             | username      | password   | SiteName      |

@@ -146,27 +146,35 @@ export default class MyProfile {
 
     hideMyGravatar() {
         cy.get("body").then($body => {
-            if ($body.find("is-checked").length > 0) {   
+            if ($body.find("is-checked").length > 0) {
                 cy.log('selected already');
             } else {
                 cy.get(this.hideToggle).click();
             }
-        }).then(()=>{
+        }).then(() => {
             this.Save();
         })
+    }
+
+    verifyHideGravatar() {
+        cy.get(this.saveProfileDetails).should('be.disabled');
     }
 
     unHideMyGravatar() {
         cy.get("body").then($body => {
             cy.log($body.find("is-checked").length)
-            if ($body.find("is-checked").length > 0) {   
+            if ($body.find("is-checked").length > 0) {
                 cy.get(this.hideToggle).click();
             } else {
                 cy.log('Un selected already');
             }
-        }).then(()=>{
+        }).then(() => {
             this.Save();
         })
+    }
+
+    verifyHideGravatar() {
+        cy.get(this.saveProfileDetails).should('be.disabled');
     }
 
     verifyAddedsite(val) {

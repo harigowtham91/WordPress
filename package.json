@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean":"npx rimraf ./cypress/reports/test-results && npx rimraf ./cypress/videos/BDD && npx rimraf ./cypress/screenshots/",
+    "clean": "npx rimraf ./cypress/reports/test-results && npx rimraf ./cypress/videos/BDD && npx rimraf ./cypress/screenshots/",
     "report": "node report.js",
     "all": "npx cypress run --browser chrome --headed --spec cypress/integration/**/* && npm run report",
     "word": "npm run clean && npx cypress run --browser chrome --headed --spec cypress/integration/BDD/Wordpress.feature && npm run report",
